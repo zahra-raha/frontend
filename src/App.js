@@ -13,8 +13,8 @@ import Header from "./components/Header"
 import Footer from "./components/Footer"
 // pages
 import Home from "./pages/Home"
-// import Products from "./pages/Products"
-import ProductDetails from './pages/ProductDetails';
+import Products from "./pages/Products"
+// import ProductDetails from './pages/ProductDetails';
 import Profile from './pages/Profile';
 import Login from "./pages/Login"
 import Register from "./pages/Register"
