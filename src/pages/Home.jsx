@@ -30,7 +30,7 @@ const Home = ({ props }) => {
             <div className="col-md-12">
               <div className="section-heading">
                 <h2>Product Categories</h2>
-                <a href="products.html">
+                <a href="/products">
                   view all products <i className="fa fa-angle-right" />
                 </a>
               </div>

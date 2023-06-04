@@ -1,16 +1,23 @@
 import { useContext } from "react"
-import { Link } from "react-router-dom"
+import { Link, NavLink } from "react-router-dom"
 import { AuthContext } from "../context/AuthContext"
+import { useLocation  } from "react-router-dom"
 
 const Header = ({ props }) => {
   const { isAuthenticated, profile } = useContext(AuthContext)
+  let location = useLocation();
+  const homeClass = location.pathname === "/" ? "nav-item active" : "nav-item";
+  const productsClass = location.pathname.match(/^\/products/) ? "nav-item active" : "nav-item";
+  const profileClass = location.pathname.match(/^\/profile/) ? "nav-item active" : "nav-item";
+  const loginClass = location.pathname.match(/^\/login/) ? "nav-item active" : "nav-item";
+
 
  return <header className="">
   <nav className="navbar navbar-expand-lg">
     <div className="container">
       <Link className="navbar-brand" to="/">
         <h2>
-          EcommerCe <em>Pro</em>
+          Market <em>Place</em>
         </h2>
       </Link>
       <button
@@ -26,25 +33,20 @@ const Header = ({ props }) => {
       </button>
       <div className="collapse navbar-collapse" id="navbarResponsive">
         <ul className="navbar-nav ml-auto">
-          <li className="nav-item active">
-            <Link className="nav-link" to="/">
+          <li className={homeClass} >
+            <Link className="nav-link" to="/" >
               Home
               <span className="sr-only">(current)</span>
             </Link>
           </li>
-          <li className="nav-item">
+          <li className={productsClass}>
             <Link className="nav-link" to="/products">
               Products
             </Link>
           </li>
-          <li className="nav-item">
-            <a className="nav-link" href="about.html">
-              About Us
-            </a>
-          </li>
         { isAuthenticated && profile?.user
         ? <>
-          <li className="nav-item">
+          <li className={profileClass}>
             <Link className="nav-link" to="/profile">
               Profile - {profile?.user.username}
             </Link>
@@ -54,7 +56,7 @@ const Header = ({ props }) => {
               Logout
             </Link>
           </li>
-          </> : <li className="nav-item">
+          </> : <li className={loginClass}>
             <Link className="nav-link" to="/login">
               Login
             </Link>

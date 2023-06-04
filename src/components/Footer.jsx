@@ -5,7 +5,7 @@ const Footer = ({ props }) => {
       <div className="col-md-12">
         <div className="inner-content">
           <p>
-            Copyright © 2023 EcommerCe Pro by Zahra Hassani
+            Copyright © 2023 Market Place by Zahra Hassani
           </p>
         </div>
       </div>
