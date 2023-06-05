@@ -15,7 +15,7 @@ const Profile= () => {
   const token = sessionStorage.getItem("token")
 
   useEffect(()=>{
-    if (!(token && token != "null")){ goto("/login") }
+    if (!(token && token !== "null")){ goto("/login") }
   }, [])
 
   useEffect(()=>{

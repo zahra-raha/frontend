@@ -1,15 +1,13 @@
-import { useContext, useState } from "react";
+
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import { axiosRequest } from "../api";
-import { AuthContext } from "../context/AuthContext";
 
 
 const Register = () => {
   const goto = useNavigate()
-  const [authErr, setAuthErr] = useState(false)
+  
   const { handleSubmit, register, watch, formState: { errors } } = useForm()
-  const { setIsAuthenticated, setProfile } = useContext(AuthContext)
 
   const onSubmit = (formData) => {
     axiosRequest
