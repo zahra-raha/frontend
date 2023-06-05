@@ -13,7 +13,7 @@
   - Username: user
   - Password: zahra098
 
-Deployed link : https://zahra-market-place.herokuapp.com/
+Deployed link : https://marketfrontend.herokuapp.com/
 # User Experience
 
 # User Stories
