@@ -2,8 +2,6 @@
 
 **Market Place** is a safe and unique place, where sellers can easily advertise thier second handed items. Our mission is to help people find thier needed items and contact to the seller through prepared from. Market Place launched in February 2023 as Django only website and launched in June 2023 with React/Django.
 
-![Responsive Mockup](https://github.com/zahra-raha/market/blob/main/static/img/Capture1.PNG)
-
 
 # Super Admin credentials
 1. Admin:
